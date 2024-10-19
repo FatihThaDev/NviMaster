@@ -18,22 +18,77 @@
 
 <body>
   <header>
-    <img src="./images/nvim-logo.png" alt="Neovim Logo" height="90">
-    <h1 id="title"><span style="color:blue">N</span>vi<span style="color:green">M</span>aster</h1>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="./images/nvim-logo.png" alt="Neovim Logo" height="90" class="nvim-logo">
+      <h1 id="title"><span style="color:blue">N</span>vi<span style="color:green">M</span>aster</h1>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: right;">
+      <button type="button" class="login-buttons">Register</button>
+      <button type="button" class="login-buttons">Log In</button>
+      <button type="button" id="theme-button">Toggle Theme</button>
+    </div>
   </header>
 
   <main>
     <nav>
       <ul>
-        <li><a href="#">About Neovim</a>
+        <li><a href="#about-nvim">About Neovim</a>
         </li>
-        <li>How to use Neovim?</li>
-        <li>Neovim quiz</li>
+        <li><a href="#">How to use Neovim?</a></li>
+        <li><a href="#">Neovim quiz</a></li>
       </ul>
     </nav>
 
     <div class="about">
-      <h1><u>What is Neovim?</u></h1>
+      <article>
+        <h1 class="titles" id="about-nvim"><u>What is Neovim?</u></h1>
+        <p class="content">Neovim is an extremely customisable text editor known for its lightning-fast loading speed.
+          It's an upgrade from the classic Vim editor, offering a more modern interface and additional features.
+        </p>
+        <p class="content">It allows its users to use various plugins to fully tailor their experience to their
+          needs by using a programming language called Lua, unlike Vim, which uses its own scripting language,
+          Vimscript.</p>
+        <p class="content">Also, Neovim increases developers' productivity by allowing them to rely fully on their
+          keyboard. <em>You do NOT need a mouse to use Neovim. Every command and motion can be executed using the
+            keyboard.</em></p>
+      </article>
+
+      <article>
+        <h1 class="titles"><u>How to navigate around Neovim?</u></h1>
+        <p class="content">Neovim has three modes that can be used:</p>
+        <ul>
+          <li><span style="color: blue;">Normal mode</span>: Used for moving around Neovim, deleting,
+            yanking(copying) and pasting text.</li>
+          <li><span style="color: green">Insert mode</span>: Used for typing text in.</li>
+          <li><span>Visual mode</span></li>
+        </ul>
+
+        <p class="content">There are a lot of keybindings that you can use to navigate around Neovim:</p>
+
+        <table>
+          <tr>
+            <th>Keybindings</th>
+            <th>Functionality</th>
+          </tr>
+          <tr>
+            <td>h</td>
+            <td>Move left</td>
+          </tr>
+          <tr>
+            <td>l</td>
+            <td>Move right</td>
+          </tr>
+          <tr>
+            <td>j</td>
+            <td>Move down</td>
+          </tr>
+          <tr>
+            <td>k</td>
+            <td>Move up</td>
+          </tr>
+        </table>
+
+      </article>
     </div>
   </main>
 </body>

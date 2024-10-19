@@ -5,20 +5,26 @@
 
 body {
   margin-top: 1.4em;
+  margin-left: 5em;
+  margin-right: 5em;
   font-family: "Afacad Flux", sans-serif;
   background-color: whitesmoke;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 #title {
   font-weight: bold;
   font-style: italic;
-  font-size: 3.3em;
+  font-size: 3.1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 nav>ul {
@@ -27,14 +33,10 @@ nav>ul {
   align-items: center;
   text-align: center;
   width: 100%;
-  background-color: lightgreen;
   margin-top: 1em;
   padding: 1.1em 0 1.2em 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  background-color: lightgreen;
+  border-radius: 1.3em;
 }
 
 nav>ul>li {
@@ -50,10 +52,61 @@ nav>ul>li:hover {
 }
 
 .about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1.2em;
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 1.3em;
 }
 
-main {}
+article {
+  display: block;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+.titles {
+  text-align: center;
+  font-size: 2em;
+}
+
+table {
+  text-align: center;
+  justify-self: center;
+  margin-top: 1.5em;
+  border: 3px solid black;
+}
+
+.content {
+  font-size: 1.3em;
+}
+
+.login-buttons {
+  background-color: lightgreen;
+  border-radius: 10px;
+  width: 7em;
+  height: 3em;
+  font-size: 0.9em;
+  margin-right: 1em;
+}
+
+.login-buttons:hover {
+  background-color: green;
+  color: white;
+  transition: 700ms;
+  cursor: pointer;
+}
+
+#theme-button {
+  background-color: lightgreen;
+  border-radius: 10px;
+  width: 7em;
+  height: 3em;
+  font-size: 0.9em;
+}
+
+
+#theme-button:hover {
+  background-color: green;
+  color: white;
+  transition: 700ms;
+  cursor: pointer;
+}
