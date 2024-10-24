@@ -34,5 +34,9 @@ function toggleTheme() {
   else {
     document.body.style.backgroundColor = "whitesmoke";
     document.body.style.color = "black";
+    normal_m.style.color = "blue";
+    command_m.style.color = "blue";
+    insert_m.style.color = "green";
+    visual_m.style.color = "purple";
   }
 }
