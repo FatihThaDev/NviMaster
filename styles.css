@@ -34,7 +34,7 @@ nav>ul {
   text-align: center;
   width: 100%;
   margin-top: 1em;
-  padding: 1.1em 0 1.2em 0;
+  padding: 1.1em 0 1.1em 0;
   background-color: lightgreen;
   border-radius: 1.3em;
 }
@@ -52,12 +52,11 @@ nav>ul>li:hover {
 }
 
 .about {
-  display: block;
   margin-top: 2em;
   margin-bottom: 1.3em;
 }
 
-article {
+section {
   display: block;
   margin-bottom: 2em;
   text-align: left;
@@ -66,13 +65,20 @@ article {
 .titles {
   text-align: center;
   font-size: 2em;
+  margin-bottom: 1.1em;
+}
+
+.subtitles {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 1.1em;
 }
 
 table {
   text-align: center;
-  justify-self: center;
-  margin-top: 1.5em;
-  border: 3px solid black;
+  margin: 0 auto;
+  width: 70%;
+  font-size: 1.2em;
 }
 
 .content {
@@ -109,4 +115,35 @@ table {
   color: white;
   transition: 700ms;
   cursor: pointer;
+}
+
+.modes_text {
+  font-size: 1.2em;
+}
+
+.conf_image {
+  width: 500px;
+  height: 300px;
+}
+
+figure {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image_desc {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.config_images_wrapper {
+  display: flex;
+  align-items: space-evenly;
+  justify-content: center;
+}
+
+.demo_video {
+  margin-top: 3em;
+  text-align: center;
 }
