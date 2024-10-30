@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link css -->
+  <link rel="stylesheet" href="register.css">
+
+  <!-- Google font (Afracad Flux) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <title>Create account for NviMaster</title>
+
+</head>
+
+<body>
+
+  <header>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="./images/nvim-logo.png" alt="Neovim Logo" height="90" class="nvim-logo">
+      <h1 id="title"><span style="color:blue" id="title_color1">N</span>vi<span style="color:green"
+          id="title_color2">M</span>aster</h1>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: right;">
+      <button type="button" class="login-buttons"><a href="index.html">Back to home</a></button>
+      <button type="button" class="login-buttons"><a href="login.html">Log In</a></button>
+      <button type="button" id="theme-button" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about-nvim" class="navlinks">About Neovim</a>
+      </li>
+      <li><a href="#navigation" class="navlinks">How to use Neovim?</a></li>
+      <li><a href="#" class="navlinks">Neovim quiz</a></li>
+    </ul>
+  </nav>
+
+
+
+  <h1 id="page_title">Create an account for NviMaster to become a true coder</h1>
+  <form action="https://jsonplaceholder.typicode.com/" method="POST">
+    <fieldset>
+      <legend id="personal_info">Enter your personal information:</legend>
+
+      <div class="names">
+
+        <label for="first_name">Enter your first name:</label>
+        <input type="text" name="first_name" id="first_name" placeholder="First name goes here..."
+          style="margin-right: 0.9em" required maxlength="50" minlength="1">
+
+        <label for="last_name">Enter your last name:</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Last name goes here..." required maxlength="50"
+          minlength="1">
+
+      </div>
+
+      <div class="mail">
+
+        <label for="email">Enter your email:</label>
+        <input type="email" name="email" id="email" placeholder="Email goes here..." required maxlength="100"
+          minlength="1">
+
+      </div>
+
+      <div class="passw">
+
+        <label for="password">Choose your password:</label>
+        <input type="password" name="password" id="password" placeholder="Password goes here..." required minlength="5"
+          style="margin-right: 0.9em">
+
+        <label for="password_repeat">Repeat your password:</label>
+        <input type="password" name="password_repeat" id="password_repeat" placeholder="Password goes here..." required
+          minlength="5">
+
+      </div>
+      <button type="submit" id="register_btn" onsubmit="checkValid()">Create an account</button>
+    </fieldset>
+  </form>
+</body>
+
+
+<script src="themes.js"></script>
+<script src="form_regulation.js"></script>
+
+</html>
