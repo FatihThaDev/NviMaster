@@ -8,6 +8,13 @@ body {
   margin-left: 5em;
   margin-right: 5em;
   font-family: "Afacad Flux", sans-serif;
+
+
+  @media screen and (max-width:900px) {
+    margin-right: auto;
+    text-align: center;
+  }
+
 }
 
 header {
@@ -31,7 +38,7 @@ nav>ul {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: 95%;
   margin-top: 1em;
   padding: 1em 1.1em 1em 1.1em;
   background-color: lightgreen;
@@ -43,46 +50,13 @@ nav>ul>li {
   margin-right: 3em;
   list-style-type: none;
   font-size: 1.4em;
+  color: black;
 }
 
 nav>ul>li:hover {
   color: gray;
   transition: 500ms;
   cursor: pointer;
-}
-
-.about {
-  margin-top: 2em;
-  margin-bottom: 1.3em;
-}
-
-section {
-  display: block;
-  margin-bottom: 2em;
-  text-align: left;
-}
-
-.titles {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 1.1em;
-}
-
-.subtitles {
-  text-align: center;
-  font-size: 1.8em;
-  margin-bottom: 1.1em;
-}
-
-table {
-  text-align: center;
-  margin: 0 auto;
-  width: 70%;
-  font-size: 1.2em;
-}
-
-.content {
-  font-size: 1.3em;
 }
 
 .login-buttons {
@@ -115,35 +89,4 @@ table {
   color: white;
   transition: 700ms;
   cursor: pointer;
-}
-
-.modes_text {
-  font-size: 1.2em;
-}
-
-.conf_image {
-  width: 500px;
-  height: 300px;
-}
-
-figure {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.image_desc {
-  font-size: 1.2em;
-  font-style: italic;
-}
-
-.config_images_wrapper {
-  display: flex;
-  align-items: space-evenly;
-  justify-content: center;
-}
-
-.demo_video {
-  margin-top: 3em;
-  text-align: center;
 }

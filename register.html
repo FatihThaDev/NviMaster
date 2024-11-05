@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Link css -->
-  <link rel="stylesheet" href="register.css">
+  <link rel="stylesheet" href="./styling/register.css">
 
   <!-- Google font (Afracad Flux) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,9 +33,6 @@
 
   <nav>
     <ul>
-      <li><a href="#about-nvim" class="navlinks">About Neovim</a>
-      </li>
-      <li><a href="#navigation" class="navlinks">How to use Neovim?</a></li>
       <li><a href="#" class="navlinks">Neovim quiz</a></li>
     </ul>
   </nav>
@@ -43,7 +40,7 @@
 
 
   <h1 id="page_title">Create an account for NviMaster to become a true coder</h1>
-  <form action="https://jsonplaceholder.typicode.com/" method="POST">
+  <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
     <fieldset>
       <legend id="personal_info">Enter your personal information:</legend>
 
@@ -78,13 +75,12 @@
           minlength="5">
 
       </div>
-      <button type="submit" id="register_btn" onsubmit="checkValid()">Create an account</button>
+      <button type="submit" id="register_btn">Create an account</button>
     </fieldset>
   </form>
 </body>
 
 
 <script src="themes.js"></script>
-<script src="form_regulation.js"></script>
 
 </html>
