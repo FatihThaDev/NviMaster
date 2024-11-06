@@ -4,11 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <link rel="stylesheet" href="./styling/nvimquiz.css">
+
+  <!-- Google font (Afracad Flux) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+  <title>Neovim Quiz</title>
 </head>
 
 <body>
+  <header>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="./images/nvim-logo.png" alt="Neovim Logo" height="90" class="nvim-logo">
+      <h1 id="title"><span style="color:blue" id="title_color1">N</span>vi<span style="color:green"
+          id="title_color2">M</span>aster</h1>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: right;">
+      <button type="button" class="login-buttons"><a href="register.html">Register</a></button>
+      <button type="button" class="login-buttons"><a href="login.html">Log In</a></button>
+      <button type="button" id="theme-button" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </header>
 
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="navlinks">About Neovim</a>
+      </li>
+      <li><a href="register.html" class="navlinks">Create NviMaster account</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 id="intro_text">Take this quiz to test your knowledge on navigationg around Neovim</h2>
+
+    <h3 class="question">Is Neovim an upgrade from Vim?</h3>
+    <div class="answers">
+      <input type="radio" name="1stQuestionAns" id="1stQuestionAns1"><label for="1stQuestionAns1"
+        style="margin-right: 0.7em;">Yes</label>
+      <input type="radio" name="1stQuestionAns" id="1stQuestionAns2"><label for="1stQuestionAns2">No</label>
+    </div>
+    <h3 class="question">What button do you use to go down in Neovim?</h3>
+  </main>
 </body>
+<script src="themes.js"></script>
 
 </html>

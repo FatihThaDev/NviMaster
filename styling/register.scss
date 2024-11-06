@@ -16,11 +16,13 @@ body {
   margin-right: 5em;
   text-align: center;
   font-family: $font-family;
-}
 
-header {
-  display: grid;
-  grid-template-columns: 1fr;
+
+  @media screen and (max-width:400px) {
+    text-align: center;
+    min-width: 500px;
+  }
+
 }
 
 #title {

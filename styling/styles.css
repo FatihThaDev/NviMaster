@@ -11,15 +11,10 @@ body {
 
 
   @media screen and (max-width:900px) {
-    margin-right: auto;
     text-align: center;
+    min-width: 500px;
   }
 
-}
-
-header {
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 #title {
@@ -131,6 +126,12 @@ table {
 
 .modes_text {
   font-size: 1.2em;
+
+
+  @media screen and (max-width:900px) {
+    list-style-type: none;
+  }
+
 }
 
 .conf_image {

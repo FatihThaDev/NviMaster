@@ -11,10 +11,10 @@ body {
 
 
   @media screen and (max-width:900px) {
+    margin-right: auto;
     text-align: center;
     min-width: 500px;
   }
-
 }
 
 #title {
@@ -84,4 +84,28 @@ nav>ul>li:hover {
   color: white;
   transition: 700ms;
   cursor: pointer;
+}
+
+#intro_text {
+  text-align: center;
+  font-size: 1.7em;
+  text-decoration: underline;
+  font-weight: 700;
+  margin: 1.6em auto;
+}
+
+.question {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.answers {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0 auto;
+
 }
