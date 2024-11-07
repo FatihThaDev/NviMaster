@@ -65,28 +65,24 @@ ul {
   }
 }
 
-.login-buttons {
+.buttons_area {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+
+  @media screen and (max-width:900px) {
+    justify-content: center;
+  }
+}
+
+.buttons {
   background-color: $primary-color;
   border-radius: $button-radius;
   width: 7em;
   height: 3em;
   font-size: 0.9em;
   margin-right: 1em;
-
-  &:hover {
-    background-color: $secondary-color;
-    color: white;
-    transition: 700ms;
-    cursor: pointer;
-  }
-}
-
-#theme-button {
-  background-color: $primary-color;
-  border-radius: $button-radius;
-  width: 7em;
-  height: 3em;
-  font-size: 0.9em;
 
   &:hover {
     background-color: $secondary-color;

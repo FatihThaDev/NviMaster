@@ -53,6 +53,17 @@ nav>ul>li:hover {
   cursor: pointer;
 }
 
+.buttons_area {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+
+  @media screen and (max-width:900px) {
+    justify-content: center;
+  }
+}
+
 .about {
   margin-top: 2em;
   margin-bottom: 1.3em;
@@ -92,7 +103,7 @@ table {
   font-size: 1.3em;
 }
 
-.login-buttons {
+.buttons {
   background-color: lightgreen;
   border-radius: 10px;
   width: 7em;
@@ -101,21 +112,12 @@ table {
   margin-right: 1em;
 }
 
-.login-buttons:hover {
+.buttons:hover {
   background-color: green;
   color: white;
   transition: 700ms;
   cursor: pointer;
 }
-
-#theme-button {
-  background-color: lightgreen;
-  border-radius: 10px;
-  width: 7em;
-  height: 3em;
-  font-size: 0.9em;
-}
-
 
 #theme-button:hover {
   background-color: green;

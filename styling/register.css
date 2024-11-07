@@ -17,11 +17,6 @@ body {
   }
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 #title {
   font-weight: bold;
   font-style: italic;
@@ -59,7 +54,18 @@ ul li:hover {
   cursor: pointer;
 }
 
-.login-buttons {
+.buttons_area {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+@media screen and (max-width: 900px) {
+  .buttons_area {
+    justify-content: center;
+  }
+}
+
+.buttons {
   background-color: lightgreen;
   border-radius: 10px;
   width: 7em;
@@ -67,21 +73,7 @@ ul li:hover {
   font-size: 0.9em;
   margin-right: 1em;
 }
-.login-buttons:hover {
-  background-color: green;
-  color: white;
-  transition: 700ms;
-  cursor: pointer;
-}
-
-#theme-button {
-  background-color: lightgreen;
-  border-radius: 10px;
-  width: 7em;
-  height: 3em;
-  font-size: 0.9em;
-}
-#theme-button:hover {
+.buttons:hover {
   background-color: green;
   color: white;
   transition: 700ms;
