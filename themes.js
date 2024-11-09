@@ -20,7 +20,6 @@ function toggleTheme() {
     let im = insert_m.style.color = "lightgreen";
     let vm = visual_m.style.color = "pink";
 
-
     localStorage.setItem("background", bg)
     localStorage.setItem("text", txt)
 
