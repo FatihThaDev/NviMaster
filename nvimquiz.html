@@ -17,7 +17,7 @@
 
 <body>
   <header>
-    <div style="display: flex; justify-content: center; align-items: center;">
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 0.7em;">
       <img src="./images/nvim-logo.png" alt="Neovim Logo" height="90" class="nvim-logo">
       <h1 id="title"><span style="color:blue" id="title_color1">N</span>vi<span style="color:green"
           id="title_color2">M</span>aster</h1>
@@ -41,59 +41,62 @@
   <main>
     <h2 id="intro_text">Take this quiz to test your knowledge on navigationg around Neovim</h2>
 
-    <section>
-      <h3 class="question">Is Neovim an upgrade from Vim?</h3>
-      <div class="answers">
-        <input type="radio" name="1stQuestionAns" id="1stQuestionAns1" checked><label for="1stQuestionAns1"
-          style="margin-right: 0.7em;">Yes</label>
-        <input type="radio" name="1stQuestionAns" id="1stQuestionAns2"><label for="1stQuestionAns2">No</label>
-      </div>
-    </section>
-    <section>
-      <h3 class="question">What keys do you use to go left, down, up and right in Neovim?</h3>
-      <div class="answers" style="display: flex; flex-direction: column;">
-        <div class="opt">
-          <input type="checkbox" name="2ndQuestionAns1" id="2ndQuestionAns1" style="margin-right: 0.5em;"><label
-            for="2ndQuestionAns1">i</label>
+    <form action="#" method="POST">
+      <section>
+        <h3 class="question">Is Neovim an upgrade from Vim?</h3>
+        <div class="answers">
+          <input type="radio" name="1stQuestionAns" id="1stQuestionAns1" checked><label for="1stQuestionAns1"
+            style="margin-right: 0.7em;">Yes</label>
+          <input type="radio" name="1stQuestionAns" id="1stQuestionAns2"><label for="1stQuestionAns2">No</label>
         </div>
-        <div class="opt">
-          <input type="checkbox" name="2ndQuestionAns2" id="2ndQuestionAns2" style="margin-right: 0.5em;"><label
-            for="2ndQuestionAns2">h</label>
+      </section>
+      <section>
+        <h3 class="question">What keys do you use to go left, down, up and right in Neovim?</h3>
+        <div class="answers" style="display: flex; flex-direction: column;">
+          <div class="opt">
+            <input type="checkbox" name="2ndQuestionAns1" id="2ndQuestionAns1" style="margin-right: 0.5em;"><label
+              for="2ndQuestionAns1">i</label>
+          </div>
+          <div class="opt">
+            <input type="checkbox" name="2ndQuestionAns2" id="2ndQuestionAns2" style="margin-right: 0.5em;"><label
+              for="2ndQuestionAns2">h</label>
+          </div>
+          <div class="opt">
+            <input type="checkbox" name="2ndQuestionAns3" id="2ndQuestionAns3" style="margin-right: 0.5em;"><label
+              for="2ndQuestionAns3">d</label>
+          </div>
+          <div class="opt">
+            <input type="checkbox" name="2ndQuestionAns4" id="2ndQuestionAns4" style="margin-right: 0.5em;"><label
+              for="2ndQuestionAns4">k</label>
+          </div>
+          <div class="opt">
+            <input type="checkbox" name="2ndQuestionAns5" id="2ndQuestionAns5" style="margin-right: 0.5em;"><label
+              for="2ndQuestionAns5">j</label>
+          </div>
+          <div class="opt">
+            <input type="checkbox" name="2ndQuestionAns6" id="2ndQuestionAns6" style="margin-right: 0.5em;"><label
+              for="2ndQuestionAns6">o</label>
+          </div>
+          <div class="opt">
+            <input type="checkbox" name="2ndQuestionAns7" id="2ndQuestionAns7" style="margin-right: 0.5em"><label
+              for="2ndQuestionAns7">l</label>
+          </div>
         </div>
-        <div class="opt">
-          <input type="checkbox" name="2ndQuestionAns3" id="2ndQuestionAns3" style="margin-right: 0.5em;"><label
-            for="2ndQuestionAns3">d</label>
+      </section>
+      <section>
+        <h3 class="question">To highlight text, you should go into insert mode?</h3>
+        <div class="answers">
+          <input type="radio" name="3rdQuestionAns" id="3rdQuestionAns1" checked><label for="3rdQuestionAns1"
+            style="margin-right: 0.7em;">True</label>
+          <input type="radio" name="3rdQuestionAns" id="3rdQuestionAns2"><label for="3rdQuestionAns2">False</label>
         </div>
-        <div class="opt">
-          <input type="checkbox" name="2ndQuestionAns4" id="2ndQuestionAns4" style="margin-right: 0.5em;"><label
-            for="2ndQuestionAns4">k</label>
-        </div>
-        <div class="opt">
-          <input type="checkbox" name="2ndQuestionAns5" id="2ndQuestionAns5" style="margin-right: 0.5em;"><label
-            for="2ndQuestionAns5">j</label>
-        </div>
-        <div class="opt">
-          <input type="checkbox" name="2ndQuestionAns6" id="2ndQuestionAns6" style="margin-right: 0.5em;"><label
-            for="2ndQuestionAns6">o</label>
-        </div>
-        <div class="opt">
-          <input type="checkbox" name="2ndQuestionAns7" id="2ndQuestionAns7" style="margin-right: 0.5em"><label
-            for="2ndQuestionAns7">l</label>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h3 class="question">To highlight text, you should go into insert mode?</h3>
-      <div class="answers">
-        <input type="radio" name="3rdQuestionAns" id="3rdQuestionAns1" checked><label for="3rdQuestionAns1"
-          style="margin-right: 0.7em;">True</label>
-        <input type="radio" name="3rdQuestionAns" id="3rdQuestionAns2"><label for="3rdQuestionAns2">False</label>
-      </div>
 
-      <div style="display: flex;align-items: center;justify-content: center;margin-top: 1.4em;">
-        <button type="button" id="submit_btn">Submit answers</button>
-      </div>
-    </section>
+        <div style="display: flex;align-items: center;justify-content: center;margin-top: 1.4em;">
+          <button type="submit" id="submit_btn" style="margin-bottom: 0.7em;margin-right: 1em;">Submit answers</button>
+          <button type="reset" id="reset_btn" style="margin-bottom: 0.7em;">Reset quiz</button>
+        </div>
+      </section>
+    </form>
   </main>
 </body>
 <script src="themes.js"></script>

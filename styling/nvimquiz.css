@@ -114,10 +114,24 @@ nav>ul>li:hover {
 #submit_btn {
   background: linear-gradient(90deg, whitesmoke, lightgreen, green);
   padding: 0.7em 1em 0.7em 1em;
+  font-size: 0.9em;
 }
 
 #submit_btn:hover {
   background: linear-gradient(90deg, green, lightgreen, whitesmoke, white);
   transform: translateY(-20%);
   transition: 600ms;
+}
+
+#reset_btn {
+  background: linear-gradient(90deg, whitesmoke, red);
+  padding: 0.7em 1em 0.7em 1em;
+  font-size: 0.9em;
+}
+
+#reset_btn:hover {
+  background: linear-gradient(90deg, red, whitesmoke);
+  transform: translateY(-20%);
+  transition: 600ms;
+
 }

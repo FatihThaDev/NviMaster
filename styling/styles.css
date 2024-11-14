@@ -195,8 +195,31 @@ footer>section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+
+  @media screen and (max-width:1040px) {
+    display: block;
+  }
+
+}
+
+footer>section>article {
+  margin-bottom: 1.4em;
+  margin-left: 1.4em;
 }
 
 .footer-text {
   font-weight: 500;
+}
+
+#distros_btn {
+  background: lightgreen;
+  padding: 0.2em;
+  border-radius: 12px;
+}
+
+#distros_btn:hover {
+  opacity: 50%;
+  transform: translateY(-10px);
+  transition: 800ms;
 }
