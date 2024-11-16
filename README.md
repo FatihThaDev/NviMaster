@@ -7,5 +7,6 @@ It offers:
 - Installing plugins using various package managers(lazy.nvim, packer.nvim...), using Lua syntax
 - Keyboard-centric workflow(no mouse required)
 - Minimalism(it can be as complicated as you configure it to be)
+- Customizability(it can be configured to rival any other IDE)
 
 ### Want to learn more about Neovim? Visit their Github repo: https://github.com/neovim/neovim or homepage: https://neovim.io/
