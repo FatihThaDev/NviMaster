@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 1.4em;
+  margin-left: 5em;
+  margin-right: 5em;
+  text-align: center;
+  font-family: "Afacad Flux", sans-serif;
+}
+@media screen and (max-width: 400px) {
+  body {
+    text-align: center;
+    min-width: 500px;
+  }
+}
+
+#title {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3.1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  padding: 1.1em 0 1.1em 0;
+  background-color: lightgreen;
+  border-radius: 10px;
+  color: black;
+}
+ul li {
+  margin-right: 3em;
+  list-style-type: none;
+  font-size: 1.4em;
+}
+ul li:hover {
+  color: gray;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.buttons_area {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+@media screen and (max-width: 900px) {
+  .buttons_area {
+    justify-content: center;
+  }
+}
+
+.buttons {
+  background-color: lightgreen;
+  border-radius: 10px;
+  width: 7em;
+  height: 3em;
+  font-size: 0.9em;
+  margin-right: 1em;
+}
+.buttons:hover {
+  background-color: green;
+  color: white;
+  transition: 700ms;
+  cursor: pointer;
+}
+
+fieldset {
+  padding: 0 1em 1em 1em;
+  width: 90%;
+}
+
+#personal_info {
+  font-size: 1.6em;
+}
+
+label {
+  font-size: 1.3em;
+}
+@media screen and (max-width: 1075px) {
+  label {
+    display: block;
+    align-items: left;
+  }
+}
+
+input {
+  font-size: 1em;
+  border-radius: 10px;
+  padding: 3px 5px 3px 5px;
+}
+input:hover {
+  background-color: lightgreen;
+  transition: 1000ms;
+}
+
+#page_title {
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: center;
+}
+
+#personal_info {
+  margin-bottom: 1em;
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 1075px) {
+  .names {
+    display: block;
+    align-items: left;
+  }
+}
+
+.mail {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.passw {
+  display: block;
+}
+
+#register_btn {
+  background-color: lightgreen;
+  font-size: 1em;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+#register_btn:hover {
+  font-size: 0.85em;
+  transition: 200ms;
+  cursor: pointer;
+}/*# sourceMappingURL=register.css.map */
