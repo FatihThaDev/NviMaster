@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Neovim distro showcase</title>
+
+  <!-- Google font (Afacad Flux) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="mt-[1.4em] mx-[5em] text-center font-[Afracad] font-sans">
+  <header>
+    <div class="flex justify-center items-center mb-[0.7em]">
+      <img src="./images/nvim-logo.png" alt="Neovim Logo" class="nvim-logo h-24">
+      <h1 class="text-3xl font-bold italic lg:text-4xl"><span class="text-blue-700">N</span>vi<span>M</span>aster</h1>
+    </div>
+    <div class="buttons_area flex items-center justify-center lg:justify-end text-black">
+      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+        hover:cursor-pointer duration-700"><a href="register.html">Register</a></button>
+      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+        hover:cursor-pointer duration-700"><a href="login.html">Log In</a></button>
+      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+        hover:cursor-pointer duration-700" onclick="toggleTheme()">Toggle Theme</button>
+      <i id="hamburger-menu" class="fa-solid fa-bars fa-xl text-3xl text-green-500 lg:hidden hover:cursor-pointer"></i>
+
+    </div>
+  </header>
+
+  <nav id="nav" class="hidden lg:block">
+    <ul
+      class="flex flex-col lg:flex-row justify-evenly items-center text-black text-center md:w-[100%] mt-[1em] lg:py-[1em] px-0 lg:px-[1.1em] lg:min-w-[400px] lg:bg-green-400 lg:rounded-xl">
+
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md md:text-xl bg-green-400 rounded-md w-[100%] lg:w-1/4 lg:bg-transparent hover:text-gray-500 duration-700">
+        <a href="index.html">Back to home</a>
+      </li>
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
+        <a href="#navigation" class="navlinks">How to use Neovim?</a>
+      </li>
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
+        <a href="distro_gallery.html" class="navlinks">Gallery of Neovim distros</a>
+      </li>
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
+        <a href="nvimquiz.html" class="navlinks">Neovim quiz</a>
+      </li>
+    </ul>
+  </nav>
+  <script src="scripts/themes.js"></script>
+  <script src="scripts/distro_gallery.js"></script>
+</body>
+
+</html>
