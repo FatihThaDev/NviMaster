@@ -158,6 +158,14 @@ input {
   display: block;
 }
 
+#password_repeat {
+  margin-top: 0;
+
+  @media screen and (min-width:1094px) {
+    margin-top: 1em;
+  }
+}
+
 #register_btn {
   background-color: $primary-color;
   font-size: 1em;
@@ -170,4 +178,28 @@ input {
     transition: 200ms;
     cursor: pointer;
   }
+}
+
+.tooltip {
+  position: relative;
+  display: inline;
+}
+
+.tooltip>.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

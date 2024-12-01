@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
   <title>Create account for NviMaster</title>
 
 </head>
@@ -60,27 +61,67 @@
 
         <label for="email">Enter your email:</label>
         <input type="email" name="email" id="email" placeholder="Email goes here..." required maxlength="100"
-          minlength="1">
+          minlength="10">
 
       </div>
 
       <div class="passw">
 
-        <label for="password">Choose your password:</label>
-        <input type="password" name="password" id="password" placeholder="Password goes here..." required minlength="5"
-          style="margin-right: 0.9em">
+        <div style="display: block;margin-bottom:0.7em">
 
-        <label for="password_repeat">Repeat your password:</label>
-        <input type="password" name="password_repeat" id="password_repeat" placeholder="Password goes here..." required
-          minlength="5">
+          <div style="position:absolute;display: flex;justify-content: center;align-items: center;">
 
+          </div>
+
+          <div class="tooltip">
+            <span class="tooltiptext">>6 characters, 1 uppercase, 1 lowercase, 1 number, 1 symbol</span>
+            <label for="hs-strong-password-with-indicator-and-hint" id="tooltip_trigger">Create your password:</label>
+          </div>
+          <div>
+
+            <input style="margin-top:0.5em;" type="password" name="password" placeholder="Password goes here..."
+              required minlength="5" id="hs-strong-password-with-indicator-and-hint" oninput="checkPasswordStrength();">
+
+            <div id="hs-strong-password" data-hs-strong-password=' { "target"
+              : "#hs-strong-password-with-indicator-and-hint" , "hints" : "#hs-strong-password-hints" , "stripClasses"
+              : "hs-strong-password:opacity-100 hs-strong-password-accepted:bg-teal-500 h-2 flex-auto rounded-full bg-blue-500 opacity-50 mx-1"
+              }' class="flex mt-2 -mx-1">
+            </div>
+
+          </div>
+
+          <div id="hs-strong-password-hints">
+            <div>
+              <span style="font-size: 1.3em;">Strength:</span>
+              <span id="password_weakness"
+                data-hs-strong-password-hints-weakness-text='["Empty", "Weak", "Medium", "Strong", "Very Strong", "Super Strong"]'
+                style="font-size: 1.2em;"></span>
+            </div>
+
+            <span style="display: none;" data-check="">
+            </span>
+            <span data-uncheck="">
+            </span>
+          </div>
+
+          <div>
+
+            <label for="password_repeat" style="margin-top:1em;">Repeat your password:</label>
+            <input type="password" name="password_repeat" id="password_repeat" placeholder="Repeat password..." required
+              minlength="5">
+
+          </div>
+
+          <button type="submit" id="register_btn" onsubmit="validate();" disabled>Create an account</button>
+        </div>
       </div>
-      <button type="submit" id="register_btn">Create an account</button>
     </fieldset>
   </form>
 </body>
 
 
 <script src="scripts/themes.js"></script>
+<script src="scripts/register_check.js"></script>
+<script src="./node_modules/preline/dist/preline.js"></script>
 
 </html>

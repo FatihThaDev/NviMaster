@@ -1,0 +1,20 @@
+{
+  "name": "nvimaster",
+  "version": "1.0.0",
+  "description": "Nvimaster is a web app that helps users learn how to navigate inside a configurable and lightweight text/code editor called Neovim.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "@preline/strong-password": "^2.5.0",
+    "preline": "^2.5.1"
+  }
+}
