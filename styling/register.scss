@@ -182,7 +182,6 @@ input {
 
 .tooltip {
   position: relative;
-  display: inline;
 }
 
 .tooltip>.tooltiptext {
@@ -199,7 +198,6 @@ input {
   margin-left: -60px;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover>.tooltiptext {
   visibility: visible;
-  opacity: 1;
 }

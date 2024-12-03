@@ -56,6 +56,11 @@ function toggleTheme() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  let normal_m = document.getElementById(("normal_m"));
+  let command_m = document.getElementById(("command_m"));
+  let insert_m = document.getElementById(("insert_m"));
+  let visual_m = document.getElementById(("visual_m"));
+
   let bgc = localStorage.getItem("background");
   let text = localStorage.getItem("text")
 
