@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Neovim distro showcase</title>
+  <title>Neovim configurations showcase</title>
 
   <!-- Google font (Afacad Flux) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="./output.css" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -19,7 +23,7 @@
 
 </head>
 
-<body class="mt-[1.4em] mx-[5em] text-center font-sans">
+<body class="mt-[1.4em] mx-12 text-center font-sans">
   <header>
     <div class="flex justify-center items-center mb-[0.7em]">
       <img src="./images/nvim-logo.png" alt="Neovim Logo" class="nvim-logo h-24">
@@ -39,7 +43,7 @@
     </div>
   </header>
 
-  <nav id="nav" class="hidden lg:block mb-8">
+  <nav id="nav" class="hidden lg:block">
     <ul
       class="flex flex-col lg:flex-row justify-evenly items-center text-black text-center md:w-[100%] mt-[1em] lg:py-[1em] px-0 lg:px-[1.1em] lg:min-w-[400px] lg:bg-green-400 lg:rounded-xl">
 
@@ -59,46 +63,68 @@
   </nav>
 
   <main>
-    <div class="gallery_area mt-8 bg-[whitesmoke] text-black flex-col justify-around items-center lg:flex lg:flex-row">
-      <div class="card">
-        <img src="#" alt="Card Image">
-        <h2>Title 1</h2>
-        <p>Text 1</p>
+    <h2 class="text-lg font-semibold sm:text-xl md:text-2xl my-4 md:my-6">Gallery of Neovim configurations</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="/images/nvim_example_img.png" alt="Card Image"
+          onclick="showModal('/images/nvim_example_img.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Lightly customized Neovim config</h3>
       </div>
-
-      <div class="card">
-        <img src="#" alt="Card Image">
-        <h2>Title 2</h2>
-        <p>Text 2</p>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/nvim_customized.png" alt="Card Image"
+          onclick="showModal('./images/nvim_customized.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Heavily customized Neovim config</h3>
       </div>
-
-      <div class="card">
-        <img src="#" alt="Card Image">
-        <h2>Title 3</h2>
-        <p>Text 3</p>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/lazyvim.png" alt="Card Image"
+          onclick="showModal('./images/lazyvim.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">LazyVim(Neovim distro)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/NvChad.png" alt="Card Image" onclick="
+          showModal('./images/NvChad.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">NvChad(Neovim distro)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/vscode-config.png" alt="Card Image"
+          onclick="showModal('./images/vscode-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">VSCode-inspired Neovim config</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/astronvim.png" alt="Card Image"
+          onclick="showModal('./images/astronvim.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">AstroNvim(Neovim distro)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/solarized-config.png" alt="Card Image"
+          onclick="showModal('./images/solarized-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Solarized config(using solarized theme)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/transparent-config.png" alt="Card Image"
+          onclick="showModal('./images/transparent-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Transparent config</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/tokyonight-config.png" alt="Card Image"
+          onclick="showModal('./images/tokyonight-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Tokyonight config(using tokyonight theme)</h3>
       </div>
     </div>
-    </div>
 
-    <div class="gallery_area mt-8 bg-[whitesmoke] text-black flex-col justify-around items-center lg:flex lg:flex-row">
-      <div class="card">
-        <img src="#" alt="Card Image">
-        <h2>Title 1</h2>
-        <p>Text 1</p>
+
+    <div id="modal" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/60 justify-center items-center">
+
+      <button type="button" class="fixed fa-solid fa-x top-6 right-8 text-white text-xl sm:text-2xl md:text-3xl 
+        font-bold hover:cursor-pointer hover:text-red-500 transition-all" onclick="closeModal()"></button>
+
+      <div class="block">
+        <img id="modal-img" class="max-w-[800px] max-h-[600px]" />
+
+        <input id="minmax-range" type="range" min="450" value="860" max="1000"
+          class="w-full h-2 rounded-lg cursor-pointer" oninput="scaleModal()">
       </div>
 
-      <div class="card">
-        <img src="#" alt="Card Image">
-        <h2>Title 2</h2>
-        <p>Text 2</p>
-      </div>
-
-      <div class="card">
-        <img src="#" alt="Card Image">
-        <h2>Title 3</h2>
-        <p>Text 3</p>
-      </div>
-    </div>
     </div>
 
   </main>
