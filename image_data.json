@@ -1,0 +1,48 @@
+
+[
+  {
+    "source": "./images/nvim_example_img.png",
+    "title": "Lightly customized Neovim config",
+    "description": "This configuration is very light on resources and enables Neovim to maintain its native speed."
+  },
+  {
+    "source": "./images/nvim_customized.png",
+    "title": "Heavily customized Neovim config",
+    "description": "This is a configuration heavy on resources. It has a lot of added features, but the main drawback is performance."
+  },
+  {
+    "source": "./images/lazyvim.png",
+    "title": "LazyVim(Neovim distro)",
+    "description": "LazyVim is a preconfigured Neovim distro that comes with a lot of quality-of-life features preconfigured. It is made by the same developer who created lazy.nvim package manager."
+  },
+ {
+    "source": "./images/NvChad.png",
+    "title": "NvChad(Neovim distro)",
+    "description": "NvChad is similar to LazyVim, except it has a little more features preconfigured. It is not as popular as LazyVim, though."
+  },
+ {
+    "source": "./images/vscode-config.png",
+    "title": "VSCode-inspired Neovim config",
+    "description": "This is a Neovim configuration that is heavily inspired by the VSCode theme."
+  },
+  {
+    "source": "./images/astronvim.png",
+    "title": "AstroNvim(Neovim distro)",
+    "description": "AstroNvim is a Neovim distribution, similar to LazyVim. It also has community plugins, so users can add more functionality easier."
+  },
+ {
+    "source": "./images/solarized-config.png",
+    "title": "Solarized config(using solarized theme)",
+    "description": "This is a simple configuration that uses the solarized theme, which is very unique."
+  },
+ {
+    "source": "./images/transparent-config.png",
+    "title": "Transparent config",
+    "description": "This is a configuration that has a transparent theme, so it looks more visually appealing."
+  },
+ {
+    "source": "./images/tokyonight-config.png",
+    "title": "Tokyonight config(using tokyonight theme)",
+    "description": "This is a Neovim configuration that uses the Tokyonight theme, which can be very relaxing to look at."
+  }
+]
