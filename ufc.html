@@ -25,37 +25,36 @@
   <header>
     <div class="flex justify-center items-center mb-[0.7em]">
       <img src="./images/nvim-logo.png" alt="Neovim Logo" class="nvim-logo h-24">
-      <h1 class="text-3xl font-bold italic lg:text-4xl"><span class="text-blue-700">N</span>vi<span
-          class="text-green-700">M</span>aster</h1>
+      <h1 class="text-3xl font-bold italic lg:text-4xl"><span class="text-red-500">N</span>vi<span
+          class="text-red-300">M</span>aster</h1>
     </div>
     <div class="buttons_area flex items-center justify-center lg:justify-end text-black">
-      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+      <button type="button" class="buttons min-w-24 bg-red-300 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
         hover:cursor-pointer duration-700"><a href="register.html">Register</a></button>
-      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+      <button type="button" class="buttons min-w-24 bg-red-300 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
         hover:cursor-pointer duration-700"><a href="login.html">Log In</a></button>
-      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+      <button type="button" class="buttons min-w-24 bg-red-300 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
         hover:cursor-pointer duration-700" onclick="toggleTheme()">Toggle
         Theme</button>
-      <i id="hamburger-menu" class="fa-solid fa-bars fa-xl text-3xl text-green-500 lg:hidden hover:cursor-pointer"></i>
+      <i id="hamburger-menu" class="fa-solid fa-bars fa-xl text-3xl text-red-500 lg:hidden hover:cursor-pointer"></i>
     </div>
   </header>
 
   <nav id="nav" class="hidden lg:block">
     <ul
-      class="flex flex-col lg:flex-row justify-evenly items-center text-black text-center md:w-[100%] mt-[1em] lg:py-[1em] px-0 lg:px-[1.1em] lg:min-w-[400px] lg:bg-green-400 lg:rounded-xl">
-
+      class="flex flex-col lg:flex-row justify-evenly items-center text-black text-center md:w-[100%] mt-[1em] lg:py-[1em] px-0 lg:px-[1.1em] lg:min-w-[400px] lg:bg-red-300 lg:rounded-xl">
       <li
-        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md md:text-xl bg-green-400 rounded-md w-[100%] lg:w-1/4 lg:bg-transparent hover:text-gray-500 duration-700">
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md md:text-xl bg-red-300 rounded-md w-[100%] lg:w-1/4 lg:bg-transparent hover:text-gray-500 duration-700">
         <a href="index.html">Back to home</a>
       </li>
       <li
-        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-red-300 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
         <a href="distro_gallery.html" class="navlinks">Gallery of Neovim distros</a>
       </li>
     </ul>
   </nav>
 
-  <main class="mt-8">
+  <main class="mt-8 mb-4">
     <label for="name_input" class="text-lg md:text-xl block mb-2">Enter a UFC fighter's first and last name to get his
       info:</label>
     <div class="block mb-4">
@@ -64,17 +63,42 @@
       <input id="last_name_input" name="name_input" type="text" placeholder="Enter last name..."
         class="py-1 px-4 bg-purple-200 text-black">
     </div>
-    <button type="button" id="retrieve_btn" class="px-4 py-2 bg-green-600 rounded-xl hover:rounded-sm">Retrieve
-      data</button>
+    <button type="button" id="retrieve_btn" class="px-4 py-2 mb-6 bg-red-400 rounded-xl hover:rounded-sm">Get
+      statistics</button>
 
-    <div id="data_container">
-      <img id="fighter_image" src="" alt="Fighter Image" class="w-24 text-center">
-      <h2>Name: </h2>
-      <p id="name"></p>
-      <h2>Wins:</h2>
-      <p id="wins" class="text-green-400"></p>
-      <h2>Losses:</h2>
-      <p id="losses" class="text-red-400"></p>
+    <div id="data_container" class="flex flex-col items-center justify-center hidden">
+      <div class="subcontainer block md:flex lg:items-center md:justify-center">
+        <div>
+          <img id="fighter_image" src="" alt="Fighter Image" class="w-36 mb-4">
+        </div>
+        <div>
+          <h2 class="text-xl">Name: </h2>
+          <p id="name" class="mb-2 text-lg"></p>
+
+          <h2 class="text-xl">Nickname: </h2>
+          <p id="nickname" class="mb-2 text-lg"></p>
+
+          <h2 class="text-xl">Fighting style: </h2>
+          <p id="fightingStyle" class="mb-2 text-lg"></p>
+
+          <h2 class="text-xl">Height: </h2>
+          <p id="height" class="mb-2 text-lg"></p>
+
+          <h2 class="text-xl">Weight: </h2>
+          <p id="weight" class="mb-2 text-lg"></p>
+
+          <h2 class="text-xl">Wins:</h2>
+          <p id="wins" class="text-green-400 mb-2 text-lg"></p>
+
+          <h2 class="text-xl">Losses:</h2>
+          <p id="losses" class="text-red-400 mb-2 text-lg"></p>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="not-exists" class="hidden">
+      <h2 class="text-xl">FIghter does not exist or is retired!</h2>
     </div>
   </main>
 
