@@ -1,3 +1,4 @@
+// JS for toggling modal
 let modal = document.getElementById("modal");
 let modalImg = document.getElementById("modal-img");
 
@@ -14,12 +15,12 @@ const closeModal = () => {
 
 
 
-
-
-
-let images = document.querySelectorAll(".object-cover");
+// JS for loading distro descriptions from JSON file
 let distro_search = document.querySelector("#distro-search");
 let desc = document.querySelector("#description-area");
+let distro_name = document.querySelector("#distro_name");
+let change_desc = document.querySelector('#change_desc');
+let delete_desc = document.querySelector('#delete_desc');
 
 
 async function getImageData() {
@@ -51,6 +52,26 @@ async function getImageData() {
           desc.classList.add('hidden');
           break
       }
+    });
+
+    change_desc.addEventListener('click', () => {
+      let new_desc = prompt("Enter the description you want for the distro(first, make sure the description is present on the page):", "");
+
+      if (new_desc !== null) {
+        desc.innerText = new_desc;
+
+        alert("Description has been updated!");
+      }
+      else {
+        alert("The description was not updated, because you clicked cancel!");
+      }
+    });
+
+    delete_desc.addEventListener('click', () => {
+
+      desc.innerText = "";
+      alert("Description is deleted!");
+
     });
   }
 

@@ -79,41 +79,26 @@
           </div>
           <div>
 
-            <input style="margin-top:0.5em;" type="password" name="password" placeholder="Password goes here..."
-              required minlength="5" id="hs-strong-password-with-indicator-and-hint" oninput="checkPasswordStrength();">
-
-            <div id="hs-strong-password" data-hs-strong-password=' { "target"
-              : "#hs-strong-password-with-indicator-and-hint" , "hints" : "#hs-strong-password-hints" , "stripClasses"
-              : "hs-strong-password:opacity-100 hs-strong-password-accepted:bg-teal-500 h-2 flex-auto rounded-full bg-blue-500 opacity-50 mx-1"
-              }' class="flex mt-2 -mx-1">
-            </div>
-
-          </div>
-
-          <div id="hs-strong-password-hints">
-            <div>
-              <span style="font-size: 1.3em;">Strength:</span>
-              <span id="password_weakness"
-                data-hs-strong-password-hints-weakness-text='["Empty", "Weak", "Medium", "Strong", "Very Strong", "Super Strong"]'
-                style="font-size: 1.2em;"></span>
-            </div>
-
-            <span style="display: none;" data-check="">
-            </span>
-            <span data-uncheck="">
-            </span>
+            <input id="password" style="margin-top:0.5em;" type="password" name="password"
+              placeholder="Password goes here..." required minlength="5">
           </div>
 
           <div>
-
-            <label for="password_repeat" style="margin-top:1em;">Repeat your password:</label>
-            <input type="password" name="password_repeat" id="password_repeat" placeholder="Repeat password..." required
-              minlength="5">
-
+            <span style="font-size: 1.3em;">Strength:</span>
+            <span id="password_weakness" style="font-size: 1.2em;">Empty</span>
           </div>
 
-          <button type="submit" id="register_btn" onsubmit="validate();" disabled>Create an account</button>
         </div>
+
+
+        <label for="password_repeat" style="margin-top:1em;">Repeat your password:</label>
+        <input type="password" name="password_repeat" id="password_repeat" placeholder="Repeat password..." required
+          minlength="5">
+
+      </div>
+
+      <button type="submit" id="register_btn" onsubmit="validate();" disabled>Create an account</button>
+      </div>
       </div>
     </fieldset>
   </form>
