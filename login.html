@@ -71,24 +71,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 <script src="scripts/themes.js"></script>
 <script>
-  // this code is from the official bootstrap docs: https://getbootstrap.com/docs/5.0/forms/validation/
-  (function () {
-    'use strict'
+  document.querySelectorAll('.needs-validation').forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+      }
+      form.classList.add('was-validated');
+    });
+  });
 
-    var forms = document.querySelectorAll('.needs-validation')
-
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
 </script>
 
 </html>

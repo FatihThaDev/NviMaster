@@ -60,17 +60,17 @@ async function getImageData() {
       if (new_desc !== null) {
         desc.innerText = new_desc;
 
-        alert("Description has been updated!");
+        toastr.success("Description has been updated!");
       }
       else {
-        alert("The description was not updated, because you clicked cancel!");
+        toastr.error("The description was not updated, because you clicked cancel!");
       }
     });
 
     delete_desc.addEventListener('click', () => {
 
       desc.innerText = "";
-      alert("Description is deleted!");
+      toastr.warning("Description is deleted!");
 
     });
   }

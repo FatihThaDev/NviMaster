@@ -1,3 +1,4 @@
+let form = document.querySelector('form');
 let register_btn = document.getElementById('register_btn');
 
 const validate = () => {
@@ -67,3 +68,23 @@ document.getElementById('last_name').addEventListener('input', validate);
 document.getElementById('email').addEventListener('input', validate);
 document.getElementById('password_repeat').addEventListener('input', validate);
 document.getElementById('password').addEventListener('input', validate);
+
+
+
+
+// add toastr message on form submit
+form.addEventListener('submit', function submitMessage(e) {
+  if (register_btn.disabled === false) {
+    e.preventDefault();
+    setTimeout(() => {
+      toastr["success"]("Your registration data has been recorded!", "Operation succeeded");
+    }, 1000)
+  }
+  else {
+    e.preventDefault();
+    setTimeout(() => {
+      toastr["warning"]("Your registration data did not meet all the criteria!", "Operation failed");
+    }, 1000)
+
+  }
+})

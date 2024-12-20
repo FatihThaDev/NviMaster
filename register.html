@@ -13,6 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
 
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+
   <title>Create account for NviMaster</title>
 
 </head>
@@ -38,10 +42,8 @@
     </ul>
   </nav>
 
-
-
   <h1 id="page_title">Create an account for NviMaster to become a true coder</h1>
-  <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+  <form id="form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
     <fieldset>
       <legend id="personal_info">Enter your personal information:</legend>
 
@@ -75,7 +77,7 @@
 
           <div class="tooltip">
             <span class="tooltiptext">>6 characters, 1 uppercase, 1 lowercase, 1 number, 1 symbol</span>
-            <label for="hs-strong-password-with-indicator-and-hint" id="tooltip_trigger">Create your password:</label>
+            <label for="password" id="tooltip_trigger">Create your password:</label>
           </div>
           <div>
 
@@ -89,7 +91,6 @@
           </div>
 
         </div>
-
 
         <label for="password_repeat" style="margin-top:1em;">Repeat your password:</label>
         <input type="password" name="password_repeat" id="password_repeat" placeholder="Repeat password..." required
@@ -107,6 +108,8 @@
 
 <script src="scripts/themes.js"></script>
 <script src="scripts/register_check.js"></script>
-<script src="./node_modules/preline/dist/preline.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="./scripts/toastr.config.js"></script>
 
 </html>
