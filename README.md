@@ -3,7 +3,6 @@ Nvimaster is a web app that helps users learn how to navigate inside a configura
 
 ## Libraries used:
 - [Tailwind Css](https://tailwindcss.com/docs/installation)
-- [Preline UI](https://www.preline.co/docs/index.html)
 
 ## Why learn Neovim?
 Neovim offers a customizable and feature-rich experience you will not get with any other text editor(except maybe Vim).
