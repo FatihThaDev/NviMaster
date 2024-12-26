@@ -1,0 +1,68 @@
+<h1 id="page_title">Create an account for NviMaster to become a true coder</h1>
+<form id="form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+  <fieldset>
+    <legend id="personal_info">Enter your personal information:</legend>
+
+    <div class="names">
+
+      <label for="first_name">Enter your first name:</label>
+      <input type="text" name="first_name" id="first_name" placeholder="First name goes here..."
+        style="margin-right: 0.9em" required maxlength="50" minlength="1">
+
+      <label for="last_name">Enter your last name:</label>
+      <input type="text" name="last_name" id="last_name" placeholder="Last name goes here..." required maxlength="50"
+        minlength="1">
+
+    </div>
+
+    <div class="mail">
+
+      <label for="email">Enter your email:</label>
+      <input type="email" name="email" id="email" placeholder="Email goes here..." required maxlength="100"
+        minlength="10">
+
+    </div>
+
+    <div class="passw">
+
+      <div style="display: block;margin-bottom:0.7em">
+
+        <div style="position:absolute;display: flex;justify-content: center;align-items: center;">
+
+        </div>
+
+        <div class="tooltip">
+          <span class="tooltiptext">>6 characters, 1 uppercase, 1 lowercase, 1 number, 1 symbol</span>
+          <label for="password" id="tooltip_trigger">Create your password:</label>
+        </div>
+        <div>
+
+          <input id="password" style="margin-top:0.5em;" type="password" name="password"
+            placeholder="Password goes here..." required minlength="5">
+        </div>
+
+        <div>
+          <span style="font-size: 1.3em;">Strength:</span>
+          <span id="password_weakness" style="font-size: 1.2em;">Empty</span>
+        </div>
+
+      </div>
+
+      <label for="password_repeat" style="margin-top:1em;">Repeat your password:</label>
+      <input type="password" name="password_repeat" id="password_repeat" placeholder="Repeat password..." required
+        minlength="5">
+
+    </div>
+
+    <button type="submit" id="register_btn" onsubmit="validate();" disabled>Create an account</button>
+    </div>
+    </div>
+  </fieldset>
+</form>
+
+
+<script src="../scripts/themes.js"></script>
+<script src="../scripts/register_check.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../scripts/toastr.config.js"></script>

@@ -25,7 +25,7 @@ let delete_desc = document.querySelector('#delete_desc');
 
 async function getImageData() {
   try {
-    let response = await fetch('../image_data.json');
+    let response = await fetch('../data/image_data.json');
     let data = await response.json();
 
     distro_search.addEventListener('input', () => {
