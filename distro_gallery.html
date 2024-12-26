@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Neovim configurations showcase</title>
+
+  <!-- Google font (Afacad Flux) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="mt-[1.4em] mx-12 text-center font-sans">
+  <header>
+    <div class="flex justify-center items-center mb-[0.7em]">
+      <img src="./images/nvim-logo.png" alt="Neovim Logo" class="nvim-logo h-24">
+      <h1 class="text-3xl font-bold italic lg:text-4xl"><span class="text-blue-700">N</span>vi<span
+          class="text-green-700">M</span>aster</h1>
+    </div>
+    <div class="buttons_area flex items-center justify-center lg:justify-end text-black">
+      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+        hover:cursor-pointer duration-700"><a href="register.html">Register</a></button>
+      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+        hover:cursor-pointer duration-700"><a href="login.html">Log In</a></button>
+      <button type="button" class="buttons min-w-24 bg-green-400 rounded-md w-[7em] h-[3em] text-[0.9em] mr-4 hover:bg-green-700 hover:text-white
+        hover:cursor-pointer duration-700" onclick="toggleTheme()">Toggle
+        Theme</button>
+      <i id="hamburger-menu" class="fa-solid fa-bars fa-xl text-3xl text-green-500 lg:hidden hover:cursor-pointer"></i>
+
+    </div>
+  </header>
+
+  <nav id="nav" class="hidden lg:block">
+    <ul
+      class="flex flex-col lg:flex-row justify-evenly items-center text-black text-center md:w-[100%] mt-[1em] lg:py-[1em] px-0 lg:px-[1.1em] lg:min-w-[400px] lg:bg-green-400 lg:rounded-xl">
+
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md md:text-xl bg-green-400 rounded-md w-[100%] lg:w-1/4 lg:bg-transparent hover:text-gray-500 duration-700">
+        <a href="index.html">Back to home</a>
+      </li>
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
+        <a href="#navigation" class="navlinks">How to use Neovim?</a>
+      </li>
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
+        <a href="nvimquiz.html" class="navlinks">Neovim quiz</a>
+      </li>
+      <li
+        class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
+        <a href="faq.html" class="navlinks">FAQ</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="text-lg font-semibold sm:text-xl md:text-2xl my-4 md:my-6">Gallery of Neovim configurations</h2>
+
+    <div class="my-4">
+      <label for="distro-search" class="text-md md:text-lg lg:text-xl">Search for a distribution to get its
+        description:</label>
+      <input id="distro-search" name="distro-search" type="text"
+        class="mb-4 bg-neutral-300 w-64 focus:bg-purple-200 transition-all duration-700 text-black">
+
+      <p id="description-area" class="mt-6 mb-8 text-md md:text-lg lg:text:xl hidden"></p>
+
+
+      <p class="mb-2 text-md md:text-lg lg:text-xl">Change or delete current description of a distro:</p>
+
+      <div class="buttons flex flex-col items-center justify-center md:flex-row gap-2">
+        <button type="button" id="change_desc"
+          class="bg-blue-500 py-1 px-2 rounded-full hover:bg-blue-400 duration-700">Change distro
+          description</button>
+        <button type="button" id="delete_desc"
+          class="bg-red-500 py-1 px-2 rounded-full hover:bg-red-400 duration-700">Delete distro
+          description</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="/images/nvim_example_img.png" alt="Card Image"
+          onclick="showModal('/images/nvim_example_img.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Lightly customized Neovim config</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/nvim_customized.png" alt="Card Image"
+          onclick="showModal('./images/nvim_customized.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Heavily customized Neovim config</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/lazyvim.png" alt="Card Image"
+          onclick="showModal('./images/lazyvim.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">LazyVim(Neovim distro)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/NvChad.png" alt="Card Image" onclick="
+          showModal('./images/NvChad.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">NvChad(Neovim distro)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/vscode-config.png" alt="Card Image"
+          onclick="showModal('./images/vscode-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">VSCode-inspired Neovim config</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/astronvim.png" alt="Card Image"
+          onclick="showModal('./images/astronvim.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">AstroNvim(Neovim distro)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/solarized-config.png" alt="Card Image"
+          onclick="showModal('./images/solarized-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Solarized config(using solarized theme)</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/transparent-config.png" alt="Card Image"
+          onclick="showModal('./images/transparent-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Transparent config</h3>
+      </div>
+      <div>
+        <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/tokyonight-config.png" alt="Card Image"
+          onclick="showModal('./images/tokyonight-config.png')">
+        <h3 class="text-md sm:text-lg md:text-xl">Tokyonight config(using tokyonight theme)</h3>
+      </div>
+    </div>
+
+
+    <div id="modal" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/60 justify-center items-center">
+
+      <button type="button" class="fixed fa-solid fa-x top-6 right-8 text-white text-xl sm:text-2xl md:text-3xl 
+        font-bold hover:cursor-pointer hover:text-red-500 transition-all" onclick="closeModal()"></button>
+
+      <img id="modal-img" class="max-w-[800px] max-h-[600px]" />
+
+    </div>
+
+  </main>
+
+  <script src="scripts/themes.js"></script>
+  <script src="scripts/distro_gallery.js"></script>
+  <script src="scripts/nav_toggle.js"></script>
+  <script src="./scripts/toastr.config.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</body>
+
+</html>
