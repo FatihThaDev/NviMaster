@@ -47,7 +47,7 @@
         class="flex flex-col lg:flex-row justify-around items-center text-black text-center md:w-[90%] mt-[1em] lg:py-[1em] px-0 lg:px-[1.1em] lg:min-w-[400px] bg-transparent lg:bg-green-400 lg:rounded-xl">
         <li
           class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
-          <a href="#main" class="navlinks">How to use Neovim?</a>
+          <a href="#home" class="navlinks">How to use Neovim?</a>
         </li>
         <li
           class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
@@ -70,11 +70,454 @@
   </nav>
 
   <main id="spapp" class="pageContent" role="main">
-    <section id="main" data-load="main"></section>
-    <section id="distro_gallery" data-load="distro_gallery"></section>
-    <section id="nvimquiz" data-load="nvimquiz"></section>
-    <section id="ufc" data-load="ufc"></section>
-    <section id="faq" data-load="faq"></section>
+    <section id="home" data-load="home.html">
+      <link rel="stylesheet" href="./styling/styles.css">
+      <main>
+        <div class="about">
+          <section>
+            <h1 class="titles" id="about-nvim"><u>What is Neovim?</u></h1>
+            <p class="content" style="margin-bottom: 0.8em;">Neovim is an extremely customisable text editor known for
+              its
+              lightning-fast loading speed.
+              It's an upgrade from the classic Vim editor, offering a more modern interface and additional features.
+            </p>
+            <p class="content" style="margin-bottom: 0.8em;">It allows its users to use various plugins to fully tailor
+              their experience to their
+              needs by using a programming language called Lua, unlike Vim, which uses its own scripting language,
+              Vimscript.</p>
+            <p class="content">Also, Neovim increases developers' productivity by allowing them to rely fully on their
+              keyboard. <em>You do NOT need a mouse to use Neovim. Every command and motion can be executed using the
+                keyboard.</em></p>
+
+            <div class="config_images_wrapper">
+              <figure>
+                <img class="conf_image" src="./images/nvim_example_img.png" alt="Image of the base Neovim configuration"
+                  style="margin-top: 1em;" onclick="imageToggle()">
+                <figcaption class="image_desc">Base Neovim configuration</figcaption>
+              </figure>
+
+              <figure>
+                <img class="conf_image" src="./images/nvim_customized.png"
+                  alt="Image of a customized Neovim configuration" style="margin-top: 1em;" onclick="imageToggle()">
+                <figcaption class="image_desc">Heavily customized Neovim configuration</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="subtitles" id="navigation"><u>How to navigate around Neovim?</u></h2>
+            <p class="content"><u>Neovim has three modes that can be used:</u></p>
+            <ul class="modes_text">
+              <li><span id="normal_m" style="color: blue;">Normal mode</span>: Used for moving around Neovim, deleting,
+                yanking(copying) and pasting text (activated by pressing the 'esc' key).</li>
+              <li><span id="command_m" style="color: blue;">Command mode</span>: Used for executong commands like saving
+                files and exiting
+                Neovim.</li>
+              <li><span id="insert_m" style="color: green">Insert mode</span>: Used for typing text in.</li>
+              <li style="margin-bottom:1.2em;"><span id="visual_m" style="color: purple;">Visual mode</span>: Used for
+                highlighting text.</li>
+            </ul>
+
+            <p class="content">There are a lot of keybindings that you can use to navigate around Neovim:</p>
+            <p class="content" style="text-align: center; font-style: italic;">In normal mode:</p>
+            <table border="2" style="margin-bottom: 1em;">
+              <tr>
+                <th>Keybindings</th>
+                <th>Functionality</th>
+              </tr>
+              <tr>
+                <td><b>h</b></td>
+                <td>Move left</td>
+              </tr>
+              <tr>
+                <td><b>j</b></td>
+                <td>Move down</td>
+              </tr>
+              <tr>
+                <td><b>k</b></td>
+                <td>Move up</td>
+              </tr>
+              <tr>
+                <td><b>l</b></td>
+                <td>Move right</td>
+              </tr>
+              <tr>
+                <td>o</td>
+                <td>Go to the line below</td>
+              </tr>
+              <tr>
+                <td>O(shift + o)</td>
+                <td>Go to the line above</td>
+              </tr>
+              <tr>
+                <td>i</td>
+                <td>Go into insert mode</td>
+              </tr>
+              <tr>
+                <td>a</td>
+                <td>Go into insert mode, but skip one letter in a word</td>
+              </tr>
+              <tr>
+                <td>shift + i</td>
+                <td>Go to the beginning of a line</td>
+              </tr>
+              <tr>
+                <td>shift + a</td>
+                <td>Go to the end of a line</td>
+              </tr>
+              <tr>
+                <td>gg</td>
+                <td>Go to the top of the content</td>
+              </tr>
+              <tr>
+                <td>G</td>
+                <td>Go to the bottom of the content</td>
+              </tr>
+            </table>
+
+            <p class="content" style="text-align: center; font-style: italic;">In command mode:</p>
+            <table border="2" style="margin-bottom: 1em;">
+              <tr>
+                <th>Keybindings</th>
+                <th>Functionality</th>
+              </tr>
+              <tr>
+                <td>:w</td>
+                <td>Save file</td>
+              </tr>
+              <tr>
+                <td>:%s/word1/word2/g</td>
+                <td>Substitute word1 for word2</td>
+              </tr>
+              <tr>
+                <td>:q</td>
+                <td>Quit(exit Neovim)</td>
+              </tr>
+              <tr>
+                <td>:qa</td>
+                <td>Exit Neovim(including all files)</td>
+              </tr>
+              <tr>
+                <td>:colorscheme cs1</td>
+                <td>Set a colorscheme cs1</td>
+              </tr>
+              <tr>
+                <td>:new</td>
+                <td>Create and open a new file</td>
+              </tr>
+              <tr>
+                <td>:smile</td>
+                <td><i>Try it yourself</i></td>
+              </tr>
+            </table>
+
+            <div class="demo_video">
+              <video width="600" height="370" controls loop poster="./images/thumbnail1.png">
+                <source src="./videos/vim_guide.mp4" type="video/mp4">
+              </video>
+              <p class="image_desc">Vim(or Neovim) motions tutorial: <a
+                  href="https://youtu.be/X6AR2RMB5tE?si=nqxju2UHn4OWK5bY" class="vid_link"
+                  target="_blank">https://youtu.be/X6AR2RMB5tE?si=nqxju2UHn4OWK5bY</a>
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+
+    </section>
+    <section id="distro_gallery" data-load="distro_gallery.html">
+
+      <head>
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+        <!-- Font Awesome CDN -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+      </head>
+
+      <body class="mt-[1.4em] mx-12 text-center font-sans">
+        <main>
+          <h2 class="text-lg text-center font-semibold sm:text-xl md:text-2xl my-4 md:my-6">Gallery of Neovim
+            configurations</h2>
+
+          <div class="my-4">
+            <label for="distro-search" class="text-md md:text-lg lg:text-xl">Search for a distribution to
+              get its description:</label>
+
+            <input id="distro-search" name="distro-search" type="text"
+              class="mb-4 bg-neutral-300 w-64 focus:bg-purple-200 transition-all duration-700 text-black">
+
+            <p id="description-area" class="mt-6 mb-8 text-md md:text-lg lg:text:xl hidden"></p>
+
+            <p class="mb-2 text-md md:text-lg lg:text-xl">Change or delete current description of a distro:</p>
+
+            <div class="buttons flex flex-col items-center justify-center md:flex-row gap-2">
+              <button type="button" id="change_desc"
+                class="bg-blue-500 py-1 px-2 rounded-full hover:bg-blue-400 duration-700">Change distro
+                description</button>
+              <button type="button" id="delete_desc"
+                class="bg-red-500 py-1 px-2 rounded-full hover:bg-red-400 duration-700">Delete distro
+                description</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="/images/nvim_example_img.png"
+                alt="Card Image" onclick="showModal('/images/nvim_example_img.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">Lightly customized Neovim config</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/nvim_customized.png"
+                alt="Card Image" onclick="showModal('./images/nvim_customized.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">Heavily customized Neovim config</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/lazyvim.png" alt="Card Image"
+                onclick="showModal('./images/lazyvim.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">LazyVim(Neovim distro)</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/NvChad.png" alt="Card Image"
+                onclick="
+          showModal('./images/NvChad.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">NvChad(Neovim distro)</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/vscode-config.png" alt="Card Image"
+                onclick="showModal('./images/vscode-config.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">VSCode-inspired Neovim config</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/astronvim.png" alt="Card Image"
+                onclick="showModal('./images/astronvim.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">AstroNvim(Neovim distro)</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/solarized-config.png"
+                alt="Card Image" onclick="showModal('./images/solarized-config.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">Solarized config(using solarized theme)</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/transparent-config.png"
+                alt="Card Image" onclick="showModal('./images/transparent-config.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">Transparent config</h3>
+            </div>
+            <div>
+              <img class="rounded-lg w-[860px] h-[320px] object-cover" src="./images/tokyonight-config.png"
+                alt="Card Image" onclick="showModal('./images/tokyonight-config.png')">
+              <h3 class="text-md sm:text-lg md:text-xl">Tokyonight config(using tokyonight theme)</h3>
+            </div>
+          </div>
+
+
+          <div id="modal" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/60 justify-center items-center">
+
+            <button type="button" class="fixed fa-solid fa-x top-6 right-8 text-white text-xl sm:text-2xl md:text-3xl 
+        font-bold hover:cursor-pointer hover:text-red-500 transition-all" onclick="closeModal()"></button>
+
+            <img id="modal-img" class="max-w-[800px] max-h-[600px]" />
+
+          </div>
+
+        </main>
+
+        <script src="scripts/themes.js"></script>
+        <script src="scripts/distro_gallery.js"></script>
+        <script src="scripts/nav_toggle.js"></script>
+        <script src="./scripts/toastr.config.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      </body>
+    </section>
+    <section id="nvimquiz" data-load="nvimquiz.html">
+      <link rel="stylesheet" href="./styling/nvimquiz.css">
+      <main>
+        <h2 id="intro_text">Take this quiz to test your knowledge on navigationg around Neovim</h2>
+
+        <form action="#" method="POST">
+          <section>
+            <h3 class="question">Is Neovim an upgrade from Vim?</h3>
+            <div class="answers">
+              <input type="radio" name="1stQuestionAns" id="1stQuestionAns1" checked><label for="1stQuestionAns1"
+                style="margin-right: 0.7em;">Yes</label>
+              <input type="radio" name="1stQuestionAns" id="1stQuestionAns2"><label for="1stQuestionAns2">No</label>
+            </div>
+          </section>
+          <section>
+            <h3 class="question">What keys do you use to go left, down, up and right in Neovim?</h3>
+            <div class="answers" style="display: flex; flex-direction: column;">
+              <div class="opt">
+                <input type="checkbox" name="2ndQuestionAns1" id="2ndQuestionAns1" style="margin-right: 0.5em;"><label
+                  for="2ndQuestionAns1">i</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" name="2ndQuestionAns2" id="2ndQuestionAns2" style="margin-right: 0.5em;"><label
+                  for="2ndQuestionAns2">h</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" name="2ndQuestionAns3" id="2ndQuestionAns3" style="margin-right: 0.5em;"><label
+                  for="2ndQuestionAns3">d</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" name="2ndQuestionAns4" id="2ndQuestionAns4" style="margin-right: 0.5em;"><label
+                  for="2ndQuestionAns4">k</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" name="2ndQuestionAns5" id="2ndQuestionAns5" style="margin-right: 0.5em;"><label
+                  for="2ndQuestionAns5">j</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" name="2ndQuestionAns6" id="2ndQuestionAns6" style="margin-right: 0.5em;"><label
+                  for="2ndQuestionAns6">o</label>
+              </div>
+              <div class="opt">
+                <input type="checkbox" name="2ndQuestionAns7" id="2ndQuestionAns7" style="margin-right: 0.5em"><label
+                  for="2ndQuestionAns7">l</label>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3 class="question">To highlight text, you should go into insert mode?</h3>
+            <div class="answers">
+              <input type="radio" name="3rdQuestionAns" id="3rdQuestionAns1" checked><label for="3rdQuestionAns1"
+                style="margin-right: 0.7em;">True</label>
+              <input type="radio" name="3rdQuestionAns" id="3rdQuestionAns2"><label for="3rdQuestionAns2">False</label>
+            </div>
+
+            <div style="display: flex;align-items: center;justify-content: center;margin-top: 1.4em;">
+              <button type="submit" id="submit_btn" style="color:black;margin-bottom: 0.7em;margin-right: 1em;">Submit
+                answers</button>
+              <button type="reset" id="reset_btn" style="color:black;margin-bottom: 0.7em;">Reset quiz</button>
+            </div>
+          </section>
+        </form>
+      </main>
+
+    </section>
+    <section id="ufc" data-load="ufc.html">
+      <main class="mt-8 mb-4">
+        <label for="name_input" class="text-center text-lg md:text-xl block mb-2">Enter a UFC fighter's first and last
+          name to get
+          his
+          info:</label>
+        <div class=" text-center block mb-4">
+          <input id="first_name_input" name="name_input" type="text" placeholder="Enter first name..."
+            class="mb-2 md:mb-0 py-1 px-4 bg-purple-200 text-black">
+          <input id="last_name_input" name="name_input" type="text" placeholder="Enter last name..."
+            class="py-1 px-4 bg-purple-200 text-black">
+        </div>
+        <div class="flex items-center justify-center">
+          <button type="button" id="retrieve_btn" class="px-4 py-2 mb-6 bg-red-400 rounded-xl hover:rounded-sm">Get
+            statistics</button>
+        </div>
+
+        <div id="data_container" class="flex flex-col items-center justify-center hidden">
+          <div class="subcontainer block md:flex lg:items-center md:justify-center">
+            <div>
+              <img id="fighter_image" src="" alt="Fighter Image" class="w-36 mb-4">
+            </div>
+            <div>
+              <h2 class="text-xl">Name: </h2>
+              <p id="name" class="mb-2 text-lg"></p>
+
+              <h2 class="text-xl">Nickname: </h2>
+              <p id="nickname" class="mb-2 text-lg"></p>
+
+              <h2 class="text-xl">Fighting style: </h2>
+              <p id="fightingStyle" class="mb-2 text-lg"></p>
+
+              <h2 class="text-xl">Height: </h2>
+              <p id="height" class="mb-2 text-lg"></p>
+
+              <h2 class="text-xl">Weight: </h2>
+              <p id="weight" class="mb-2 text-lg"></p>
+
+              <h2 class="text-xl">Wins:</h2>
+              <p id="wins" class="text-green-400 mb-2 text-lg"></p>
+
+              <h2 class="text-xl">Losses:</h2>
+              <p id="losses" class="text-red-400 mb-2 text-lg"></p>
+
+            </div>
+          </div>
+        </div>
+
+        <div id="not-exists" class="hidden">
+          <h2 class="text-xl">FIghter does not exist or is retired!</h2>
+        </div>
+      </main>
+      <script src="./scripts/ufc.js"></script>
+    </section>
+    <section id="faq" data-load="faq.html">
+      <main>
+        <div class="container mt-6 flex items-center justify-center">
+
+          <div class="accordion w-screen">
+
+            <div id="visible1"
+              class="flex justify-between items-center px-4 py-2 border-2 border-neutral-500 hover:bg-neutral-500 hover:cursor-pointer duration-500">
+              <h2 class="font-bold">Is Neovim free?</h2>
+              <i class="fa-solid fa-chevron-down" id="arrow1"></i>
+            </div>
+            <div id="togglable1" class="py-4 border-2 border-neutral-500 p-2 hidden">
+              <p>Neovim is a free and open-source software that comes at no cost, making it accessible to everyone.
+                <span id="more_text" class="hidden">As
+                  an
+                  advanced text editor designed for developers, it builds upon the legacy of Vim with modern
+                  enhancements
+                  and
+                  an active community. Even though it is open source, donations are incredibly valuable. Contributions
+                  help
+                  sustain the project's growth, support ongoing development, and ensure that the community has access to
+                  cutting-edge tools and features.</span>
+              </p>
+              <p id="view_more"
+                class="text-green-500 underline hover:no-underline hover:text-green-300 transition-all hover:cursor-pointer">
+                View more</p>
+            </div>
+
+            <div id="visible2"
+              class="flex justify-between items-center px-4 py-2 border-2 border-neutral-500 hover:bg-neutral-500 duration-500">
+              <h2 class="font-bold">How do I download a Neovim distribution?</h2>
+              <i class="fa-solid fa-chevron-down" id="arrow2"></i>
+            </div>
+            <div id="togglable2" class="py-4 border-2 border-neutral-500 p-2 hidden">
+              <p>There are millions of Neovim distributions available, each tailored to different workflows, programming
+
+                languages, and user preferences. These distributions range from lightweight setups to highly customized
+                configurations packed with plugins and features. If you like a certain configuration and want to
+                download
+                it, you can find practically any setup on GitHub or other repositories.</p>
+            </div>
+
+            <div id="visible3"
+              class="flex justify-between items-center px-4 py-2 border-2 border-neutral-500 hover:bg-neutral-500 duration-500">
+              <h2 class="font-bold">How does Neovim compare to VSCode?</h2>
+              <i class="fa-solid fa-chevron-down" id="arrow3"></i>
+            </div>
+            <div id="togglable3" class="py-4 border-2 border-neutral-500 p-2 hidden">
+              <p>Neovim is open-source, unlike VSCode. VSCode has a lot of Microsoft telemetry built into it, while
+                Neovim
+                is completely FOSS and telemetry-free. VSCode has a lot of extensions that you can download to enhance
+                your
+                workflow, but Neovim provides a lot more customizability, allowing users to use various package managers
+                to
+                download any plugin that they want. While VSCode's main focus is to be an easy-to-use editor, Neovim
+                focuses
+                on boosting productivity, enhanching customizability and simplicity.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+    </section>
   </main>
 
   <footer>
@@ -98,28 +541,142 @@
   </footer>
 
   <!-- Required scripts -->
-  <script src="./scripts/jquery.min.js"></script>
   <script src="./scripts/jquery.spapp.min.js"></script>
+
+  <!-- Additional scripts -->
+  <script src="scripts/image_effects.js"></script>
+  <script src="./scripts/nav_toggle.js"></script>
+  <script src="./scripts/accordion.js"></script>
+  <script src="./scripts/themes.js"></script>
+  <script src="./scripts/jquery.min.js"></script>
 
   <!-- Initialize spapp -->
   <script>
-    $(document).ready(function () {
-      var app = $.spapp({
-        defaultView: "#main",
-        templateDir: "./views/"
-      });
-      app.run();
+    var app = $.spapp({
+      defaultView: "#home",
+      templateDir: "./views/",
+      pageNotFound: "error_404"
     });
+
+    app.route({
+      view: "home",
+      onCreate: function () { },
+      onReady: function () { }
+    });
+
+    app.route({
+      view: "distro_gallery",
+      onCreate: function () { },
+      onReady: function () { }
+    });
+
+    app.run();
+
+
+    // image_effects.js
+    let images = document.querySelectorAll(".conf_image");
+
+    function imageToggle() {
+
+      for (let i = 0; i <= images.length; i++) {
+        if (images[i].style.width == "500px" && images[i].style.height == "300px") {
+          images[i].style.width = "105%";
+          images[i].style.height = "90%";
+          images[i].style.transition = "1900ms";
+        }
+
+        else {
+          images[i].style.width = "500px";
+          images[i].style.height = "300px";
+        }
+      }
+
+    }
+
+    let modal = document.getElementById("modal");
+    let modalImg = document.getElementById("modal-img");
+
+    const showModal = src => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modalImg.src = src;
+    }
+
+    const closeModal = () => {
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+
+
+    // JS for loading distro descriptions from JSON file
+    let distro_search = document.querySelector("#distro-search");
+    let desc = document.querySelector("#description-area");
+    let distro_name = document.querySelector("#distro_name");
+    let change_desc = document.querySelector('#change_desc');
+    let delete_desc = document.querySelector('#delete_desc');
+
+
+    async function getImageData() {
+      try {
+        let response = await fetch('./data/image_data.json');
+        let data = await response.json();
+
+        distro_search.addEventListener('input', () => {
+          switch (distro_search.value.toLowerCase()) {
+            case "lazyvim":
+              desc.classList.remove('hidden');
+              desc.classList.add('block');
+              desc.innerText = data[2].description;
+              break;
+
+            case "nvchad":
+              desc.classList.remove('hidden');
+              desc.classList.add('block');
+              desc.innerText = data[3].description;
+              break;
+
+            case "astronvim":
+              desc.classList.remove('hidden');
+              desc.classList.add('block');
+              desc.innerText = data[5].description;
+              break;
+
+            default:
+              desc.classList.add('hidden');
+              break
+          }
+        });
+
+        change_desc.addEventListener('click', () => {
+          let new_desc = prompt("Enter the description you want for the distro(first, make sure the description is present on the page):", "");
+
+          if (new_desc !== null) {
+            desc.innerText = new_desc;
+
+            toastr.success("Description has been updated!");
+          }
+          else {
+            toastr.error("The description was not updated, because you clicked cancel!");
+          }
+        });
+
+        delete_desc.addEventListener('click', () => {
+
+          desc.innerText = "";
+          toastr.warning("Description is deleted!");
+
+        });
+      }
+
+      catch (error) {
+        console.error("There was an error in displaying data from JSON file: " + error)
+      }
+    }
+    getImageData();
+
   </script>
 
-  <!-- Additional scripts -->
-  <script src="./scripts/nav_toggle.js"></script>
-  <script src="./scripts/image_effects.js"></script>
-  <script src="./scripts/accordion.js"></script>
-  <script src="./scripts/themes.js"></script>
-  <script src="./scripts/ufc.js"></script>
-  <script src="./scripts/jquery.min.js"></script>
-  <script src="./scripts/jquery.spapp.min.js"></script>
 </body>
 
 </html>
