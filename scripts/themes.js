@@ -77,6 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
   insert_m.style.color = insertMode;
   visual_m.style.color = visualMode;
 
-  nav_text.style.color = "black";
 
 })

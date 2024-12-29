@@ -42,6 +42,12 @@
   </header>
 
   <nav id="nav" class="hidden lg:block">
+    <style>
+      .nav_active {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
     <div class="flex justify-center items-center">
       <ul
         class="flex flex-col lg:flex-row justify-around items-center text-black text-center md:w-[90%] mt-[1em] lg:py-[1em] px-0 lg:px-[1.1em] lg:min-w-[400px] bg-transparent lg:bg-green-400 lg:rounded-xl">
@@ -53,7 +59,7 @@
           class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
           <a href="#distro_gallery" class="navlinks">Gallery of Neovim distros</a>
         </li>
-        <li
+        <li id="nav-item"
           class="mb-2 lg:mb-0 md:mr-[3em] shadow-md lg:shadow-none text-md bg-green-400 rounded-md w-[100%] lg:w-1/4 md:text-xl hover:text-gray-500 duration-700">
           <a href="#nvimquiz" class="navlinks">Neovim quiz</a>
         </li>
@@ -68,6 +74,47 @@
       </ul>
     </div>
   </nav>
+  <script>
+    let nav_items = document.querySelectorAll('.navlinks');
+
+    for (let i = 0; i < nav_items.length; i++) {
+      nav_items[0].addEventListener('click', () => {
+        nav_items[0].classList.add("nav_active");
+        nav_items[1].classList.remove("nav_active");
+        nav_items[2].classList.remove("nav_active");
+        nav_items[3].classList.remove("nav_active");
+        nav_items[4].classList.remove("nav_active");
+      })
+      nav_items[1].addEventListener('click', () => {
+        nav_items[1].classList.add("nav_active");
+        nav_items[0].classList.remove("nav_active");
+        nav_items[2].classList.remove("nav_active");
+        nav_items[3].classList.remove("nav_active");
+        nav_items[4].classList.remove("nav_active");
+      })
+      nav_items[2].addEventListener('click', () => {
+        nav_items[2].classList.add("nav_active");
+        nav_items[0].classList.remove("nav_active");
+        nav_items[1].classList.remove("nav_active");
+        nav_items[3].classList.remove("nav_active");
+        nav_items[4].classList.remove("nav_active");
+      })
+      nav_items[3].addEventListener('click', () => {
+        nav_items[3].classList.add("nav_active");
+        nav_items[0].classList.remove("nav_active");
+        nav_items[1].classList.remove("nav_active");
+        nav_items[2].classList.remove("nav_active");
+        nav_items[4].classList.remove("nav_active");
+      })
+      nav_items[4].addEventListener('click', () => {
+        nav_items[4].classList.add("nav_active");
+        nav_items[0].classList.remove("nav_active");
+        nav_items[1].classList.remove("nav_active");
+        nav_items[2].classList.remove("nav_active");
+        nav_items[3].classList.remove("nav_active");
+      })
+    }
+  </script>
 
   <main id="spapp" class="pageContent" role="main">
     <section id="home" data-load="home.html">
@@ -561,8 +608,7 @@
     app.route({
       view: "home",
       onCreate: function () { },
-      onReady: function () { }
-    });
+      onReady: function () { });
 
     app.route({
       view: "distro_gallery",
@@ -676,6 +722,7 @@
     getImageData();
 
   </script>
+
 
 </body>
 
