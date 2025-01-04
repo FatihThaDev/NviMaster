@@ -24,6 +24,19 @@
 </head>
 
 <body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const username = localStorage.getItem('username');
+      if (username) {
+        let h2 = document.createElement('h2');
+        h2.innerText = "Hello, " + username;
+        h2.classList.add('text-2xl');
+        document.querySelector('#greeting').appendChild(h2);
+      }
+    });
+  </script>
+
   <header>
     <div class="flex justify-center items-center mb-[0.7em]">
       <img src="./images/nvim-logo.png" alt="Neovim Logo" class="nvim-logo h-24">
@@ -271,20 +284,11 @@
           </section>
         </div>
         <script>
-          // if not logged in go to login page
           document.addEventListener('DOMContentLoaded', () => {
             if (!localStorage.getItem("username") || !localStorage.getItem("email") || !localStorage.getItem("password")) {
               window.location.href = "./views/login.html";
             }
           })
-        </script>
-        <script>
-          let greeting_section = document.querySelector('#greeting');
-
-          let h2 = document.createElement('h2');
-          h2.innerText = "Hello " + localStorage.getItem('email');
-          h2.classList.add('text-2xl');
-          greeting_section.appendChild(h2);
         </script>
       </main>
     </section>
@@ -605,15 +609,14 @@
 
   <!-- Required scripts -->
   <script src="./scripts/jquery.spapp.min.js"></script>
+  <script src="./scripts/jquery.min.js"></script>
 
   <!-- Additional scripts -->
   <script src="scripts/image_effects.js"></script>
   <script src="./scripts/nav_toggle.js"></script>
   <script src="./scripts/accordion.js"></script>
   <script src="./scripts/themes.js"></script>
-  <script src="./scripts/jquery.min.js"></script>
 
-  <!-- Initialize spapp -->
   <script>
     var app = $.spapp({
       defaultView: "#home",
@@ -736,10 +739,6 @@
       }
     }
     getImageData();
-
-
-
-
   </script>
 
 </body>
