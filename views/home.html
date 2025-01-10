@@ -1,6 +1,7 @@
 <main>
   <div class="about" style="margin-left:1em; margin-right:1em;">
     <section>
+      <div id="greeting"></div>
       <h1 class="titles" id="about-nvim"><u>What is Neovim?</u></h1>
       <p class="content" style="margin-bottom: 0.8em;">Neovim is an extremely customisable text editor known for its
         lightning-fast loading speed.
@@ -150,3 +151,16 @@
 </main>
 
 <script src="../scripts/image_effects.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const username = localStorage.getItem('username');
+    if (username) {
+      let h2 = document.createElement('h2');
+      h2.innerText = "Hello, " + username;
+      h2.classList.add('text-3xl');
+      h2.classList.add('text-center');
+      h2.classList.add('mb-6');
+      document.querySelector('#greeting').appendChild(h2);
+    }
+  });
+</script>
