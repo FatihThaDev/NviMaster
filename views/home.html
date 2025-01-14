@@ -1,0 +1,166 @@
+<main>
+  <div class="about" style="margin-left:1em; margin-right:1em;">
+    <section>
+      <div id="greeting"></div>
+      <h1 class="titles" id="about-nvim"><u>What is Neovim?</u></h1>
+      <p class="content" style="margin-bottom: 0.8em;">Neovim is an extremely customisable text editor known for its
+        lightning-fast loading speed.
+        It's an upgrade from the classic Vim editor, offering a more modern interface and additional features.
+      </p>
+      <p class="content" style="margin-bottom: 0.8em;">It allows its users to use various plugins to fully tailor
+        their experience to their
+        needs by using a programming language called Lua, unlike Vim, which uses its own scripting language,
+        Vimscript.</p>
+      <p class="content">Also, Neovim increases developers' productivity by allowing them to rely fully on their
+        keyboard. <em>You do NOT need a mouse to use Neovim. Every command and motion can be executed using the
+          keyboard.</em></p>
+
+      <div class="config_images_wrapper">
+        <figure>
+          <img class="conf_image" src="./images/nvim_example_img.png" alt="Image of the base Neovim configuration"
+            style="margin-top: 1em;" onclick="imageToggle()">
+          <figcaption class="image_desc">Base Neovim configuration</figcaption>
+        </figure>
+
+        <figure>
+          <img class="conf_image" src="./images/nvim_customized.png" alt="Image of a customized Neovim configuration"
+            style="margin-top: 1em;" onclick="imageToggle()">
+          <figcaption class="image_desc">Heavily customized Neovim configuration</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="subtitles" id="navigation"><u>How to navigate around Neovim?</u></h2>
+      <p class="content"><u>Neovim has three modes that can be used:</u></p>
+      <ul class="modes_text">
+        <li><span id="normal_m" style="color: blue;">Normal mode</span>: Used for moving around Neovim, deleting,
+          yanking(copying) and pasting text (activated by pressing the 'esc' key).</li>
+        <li><span id="command_m" style="color: blue;">Command mode</span>: Used for executong commands like saving
+          files and exiting
+          Neovim.</li>
+        <li><span id="insert_m" style="color: green">Insert mode</span>: Used for typing text in.</li>
+        <li style="margin-bottom:1.2em;"><span id="visual_m" style="color: purple;">Visual mode</span>: Used for
+          highlighting text.</li>
+      </ul>
+
+      <p class="content">There are a lot of keybindings that you can use to navigate around Neovim:</p>
+      <p class="content" style="text-align: center; font-style: italic;">In normal mode:</p>
+      <table border="2" style="margin-bottom: 1em;">
+        <tr>
+          <th>Keybindings</th>
+          <th>Functionality</th>
+        </tr>
+        <tr>
+          <td><b>h</b></td>
+          <td>Move left</td>
+        </tr>
+        <tr>
+          <td><b>j</b></td>
+          <td>Move down</td>
+        </tr>
+        <tr>
+          <td><b>k</b></td>
+          <td>Move up</td>
+        </tr>
+        <tr>
+          <td><b>l</b></td>
+          <td>Move right</td>
+        </tr>
+        <tr>
+          <td>o</td>
+          <td>Go to the line below</td>
+        </tr>
+        <tr>
+          <td>O(shift + o)</td>
+          <td>Go to the line above</td>
+        </tr>
+        <tr>
+          <td>i</td>
+          <td>Go into insert mode</td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>Go into insert mode, but skip one letter in a word</td>
+        </tr>
+        <tr>
+          <td>shift + i</td>
+          <td>Go to the beginning of a line</td>
+        </tr>
+        <tr>
+          <td>shift + a</td>
+          <td>Go to the end of a line</td>
+        </tr>
+        <tr>
+          <td>gg</td>
+          <td>Go to the top of the content</td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td>Go to the bottom of the content</td>
+        </tr>
+      </table>
+
+      <p class="content" style="text-align: center; font-style: italic;">In command mode:</p>
+      <table border="2" style="margin-bottom: 1em;">
+        <tr>
+          <th>Keybindings</th>
+          <th>Functionality</th>
+        </tr>
+        <tr>
+          <td>:w</td>
+          <td>Save file</td>
+        </tr>
+        <tr>
+          <td>:%s/word1/word2/g</td>
+          <td>Substitute word1 for word2</td>
+        </tr>
+        <tr>
+          <td>:q</td>
+          <td>Quit(exit Neovim)</td>
+        </tr>
+        <tr>
+          <td>:qa</td>
+          <td>Exit Neovim(including all files)</td>
+        </tr>
+        <tr>
+          <td>:colorscheme cs1</td>
+          <td>Set a colorscheme cs1</td>
+        </tr>
+        <tr>
+          <td>:new</td>
+          <td>Create and open a new file</td>
+        </tr>
+        <tr>
+          <td>:smile</td>
+          <td><i>Try it yourself</i></td>
+        </tr>
+      </table>
+
+      <div class="demo_video">
+        <video width="600" height="370" controls loop poster="./images/thumbnail1.png">
+          <source src="./videos/vim_guide.mp4" type="video/mp4">
+        </video>
+        <p class="image_desc">Vim(or Neovim) motions tutorial: <a
+            href="https://youtu.be/X6AR2RMB5tE?si=nqxju2UHn4OWK5bY" class="vid_link"
+            target="_blank">https://youtu.be/X6AR2RMB5tE?si=nqxju2UHn4OWK5bY</a>
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="../scripts/image_effects.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const username = localStorage.getItem('username');
+    if (username) {
+      let h2 = document.createElement('h2');
+      h2.innerText = "Hello, " + username;
+      h2.classList.add('text-3xl');
+      h2.classList.add('text-center');
+      h2.classList.add('mb-6');
+      document.querySelector('#greeting').appendChild(h2);
+    }
+  });
+</script>

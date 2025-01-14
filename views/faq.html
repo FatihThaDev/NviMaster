@@ -1,0 +1,55 @@
+<main>
+  <div class="container mt-6 flex items-center justify-center">
+
+    <div class="accordion w-screen mx-4">
+
+      <div id="visible1"
+        class="flex justify-between items-center px-4 py-2 border-2 border-neutral-500 hover:bg-neutral-500 hover:cursor-pointer duration-500">
+        <h2 class="font-bold">Is Neovim free?</h2>
+        <i class="fa-solid fa-chevron-down" id="arrow1"></i>
+      </div>
+      <div id="togglable1" class="py-4 border-2 border-neutral-500 p-2 hidden">
+        <p>Neovim is a free and open-source software that comes at no cost, making it accessible to everyone. <span
+            id="more_text" class="hidden">As
+            an
+            advanced text editor designed for developers, it builds upon the legacy of Vim with modern enhancements
+            and
+            an active community. Even though it is open source, donations are incredibly valuable. Contributions help
+            sustain the project's growth, support ongoing development, and ensure that the community has access to
+            cutting-edge tools and features.</span></p>
+        <p id="view_more"
+          class="text-green-500 underline hover:no-underline hover:text-green-300 transition-all hover:cursor-pointer">
+          View more</p>
+      </div>
+
+      <div id="visible2"
+        class="flex justify-between items-center px-4 py-2 border-2 border-neutral-500 hover:bg-neutral-500 duration-500">
+        <h2 class="font-bold">How do I download a Neovim distribution?</h2>
+        <i class="fa-solid fa-chevron-down" id="arrow2"></i>
+      </div>
+      <div id="togglable2" class="py-4 border-2 border-neutral-500 p-2 hidden">
+        <p>There are millions of Neovim distributions available, each tailored to different workflows, programming
+
+          languages, and user preferences. These distributions range from lightweight setups to highly customized
+          configurations packed with plugins and features. If you like a certain configuration and want to download
+          it, you can find practically any setup on GitHub or other repositories.</p>
+      </div>
+
+      <div id="visible3"
+        class="flex justify-between items-center px-4 py-2 border-2 border-neutral-500 hover:bg-neutral-500 duration-500">
+        <h2 class="font-bold">How does Neovim compare to VSCode?</h2>
+        <i class="fa-solid fa-chevron-down" id="arrow3"></i>
+      </div>
+      <div id="togglable3" class="py-4 border-2 border-neutral-500 p-2 hidden">
+        <p>Neovim is open-source, unlike VSCode. VSCode has a lot of Microsoft telemetry built into it, while Neovim
+          is completely FOSS and telemetry-free. VSCode has a lot of extensions that you can download to enhance your
+          workflow, but Neovim provides a lot more customizability, allowing users to use various package managers to
+          download any plugin that they want. While VSCode's main focus is to be an easy-to-use editor, Neovim focuses
+          on boosting productivity, enhanching customizability and simplicity.</p>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="../scripts/accordion.js"></script>
+</main>

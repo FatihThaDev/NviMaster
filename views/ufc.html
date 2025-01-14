@@ -1,0 +1,50 @@
+<main class="mt-8 mb-4 text-center">
+  <label for="first_name_input" class="text-lg md:text-xl block mb-2">Enter a UFC fighter's first and last name to get
+    his
+    info:</label>
+  <div class="block mb-4">
+    <input id="first_name_input" name="name_input" type="text" placeholder="Enter first name..."
+      class="mb-2 md:mb-0 py-1 px-4 bg-purple-200 text-black">
+    <input id="last_name_input" name="name_input" type="text" placeholder="Enter last name..."
+      class="py-1 px-4 bg-purple-200 text-black">
+  </div>
+  <button type="button" id="retrieve_btn" class="px-4 py-2 mb-6 bg-red-400 rounded-xl hover:rounded-sm">Get
+    statistics</button>
+
+  <div id="data_container" class="flex flex-col items-center justify-center hidden">
+    <div class="subcontainer block md:flex lg:items-center md:justify-center">
+      <div>
+        <img id="fighter_image" src="" alt="Fighter Image" class="w-36 mb-4">
+      </div>
+      <div>
+        <h2 class="text-xl">Name: </h2>
+        <p id="name" class="mb-2 text-lg"></p>
+
+        <h2 class="text-xl">Nickname: </h2>
+        <p id="nickname" class="mb-2 text-lg"></p>
+
+        <h2 class="text-xl">Fighting style: </h2>
+        <p id="fightingStyle" class="mb-2 text-lg"></p>
+
+        <h2 class="text-xl">Height: </h2>
+        <p id="height" class="mb-2 text-lg"></p>
+
+        <h2 class="text-xl">Weight: </h2>
+        <p id="weight" class="mb-2 text-lg"></p>
+
+        <h2 class="text-xl">Wins:</h2>
+        <p id="wins" class="text-green-400 mb-2 text-lg"></p>
+
+        <h2 class="text-xl">Losses:</h2>
+        <p id="losses" class="text-red-400 mb-2 text-lg"></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="not-exists" class="hidden">
+    <h2 class="text-xl">FIghter does not exist or is retired!</h2>
+  </div>
+</main>
+
+<script src="../scripts/ufc.js"></script>

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 1.4em;
+  margin-left: 5em;
+  margin-right: 5em;
+  font-family: "Afacad Flux", sans-serif;
+
+
+  @media screen and (max-width:900px) {
+    margin-right: auto;
+    text-align: center;
+    min-width: 340px;
+  }
+}
+
+#title {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3.1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav>ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  margin-top: 1em;
+  padding: 1em 1.1em 1em 1.1em;
+  background-color: lightgreen;
+  border-radius: 1.3em;
+  min-width: 400px;
+}
+
+nav>ul>li {
+  margin-right: 3em;
+  list-style-type: none;
+  font-size: 1.4em;
+  color: black;
+}
+
+nav>ul>li:hover {
+  color: gray;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.buttons {
+  background-color: lightgreen;
+  border-radius: 10px;
+  width: 7em;
+  height: 3em;
+  font-size: 0.9em;
+  margin-right: 1em;
+}
+
+.buttons_area {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+
+  @media screen and (max-width:900px) {
+    justify-content: center;
+  }
+
+}
+
+.buttons:hover {
+  background-color: green;
+  color: white;
+  transition: 700ms;
+  cursor: pointer;
+}
+
+#theme-button:hover {
+  background-color: green;
+  color: white;
+  transition: 700ms;
+  cursor: pointer;
+}
+
+#intro_text {
+  text-align: center;
+  font-size: 1.7em;
+  text-decoration: underline;
+  font-weight: 700;
+  margin: 1.6em auto;
+}
+
+.question {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.answers {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#submit_btn {
+  background: linear-gradient(90deg, whitesmoke, lightgreen, green);
+  padding: 0.7em 1em 0.7em 1em;
+  font-size: 0.9em;
+}
+
+#submit_btn:hover {
+  background: linear-gradient(90deg, green, lightgreen, whitesmoke, white);
+  transform: translateY(-20%);
+  transition: 600ms;
+}
+
+#reset_btn {
+  background: linear-gradient(90deg, whitesmoke, red);
+  padding: 0.7em 1em 0.7em 1em;
+  font-size: 0.9em;
+}
+
+#reset_btn:hover {
+  background: linear-gradient(90deg, red, whitesmoke);
+  transform: translateY(-20%);
+  transition: 600ms;
+
+}
